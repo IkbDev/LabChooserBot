@@ -1,4 +1,4 @@
-## LabChooser Bot
+## LabChooser Bot ![Build Status](https://travis-ci.org/IkbDev/LabChooserBot.svg?branch=master)
 
 Бот, который помогает с **правильным** выбором варианта для лабораторных работ по программированию.
 
