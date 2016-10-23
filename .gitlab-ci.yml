@@ -1,5 +1,0 @@
-image: java:8u92
-
-job1:
-  script:
-    - ant all
