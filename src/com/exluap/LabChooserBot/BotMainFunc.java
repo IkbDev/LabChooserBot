@@ -45,6 +45,7 @@ public class BotMainFunc extends TelegramLongPollingBot {
         } else if (message.getText().startsWith("Мои цифры студенческого:") ) {
             SendMSG(message.getChatId().toString(),"Твой вариант лабораторной №2 : " + LabWork(Integer.parseInt(splitter(message.getText())))); //Преобразование строки в число
             SendMSG(message.getChatId().toString(),"Твой вариант лабораторной №3 : " + LabWork2(Integer.parseInt(splitter(message.getText()))));
+            SendMSG(message.getChatId().toString(),LabWork4(Integer.parseInt(splitter(message.getText()))));
         }
 
         }
@@ -91,5 +92,23 @@ public class BotMainFunc extends TelegramLongPollingBot {
         b = b % 100 % 10 % 6 + 1;
 
         return b;
+    }
+
+    String LabWork4 (int numbers) {
+        numbers = numbers % 100;
+        String result = "Твой вариант лаборатоной работы №4: ";
+        switch(numbers) {
+            case 1: return result + '1';
+            case 2: return result + '2';
+            case 3: return result + '3';
+            case 4: return result + '4';
+            case 5: return result + '5';
+            case 6: return result + '6';
+            case 0: return result + '4';
+            case 7:
+            case 8:
+            case 9: return result + (numbers-3);
+        }
+      return null;
     }
 }
