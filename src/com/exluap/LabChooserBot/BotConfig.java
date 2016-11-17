@@ -8,5 +8,5 @@ package com.exluap.LabChooserBot;
  */
 public class BotConfig {
     public static final String BOT_NAME = "LabChooserBot";
-    public static final String BOT_TOKEN =""; //Токен нельзя давать в общий доступ
+    public static final String BOT_TOKEN ="XXXXX"; //Токен нельзя давать в общий доступ
 }

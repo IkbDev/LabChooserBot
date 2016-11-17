@@ -95,8 +95,8 @@ public class BotMainFunc extends TelegramLongPollingBot {
     }
 
     String LabWork4 (int numbers) {
-        numbers = numbers % 100;
-        String result = "Твой вариант лаборатоной работы №4: ";
+        numbers = numbers % 10;
+        String result = "Твой вариант лаборатоной №4: ";
         switch(numbers) {
             case 1: return result + '1';
             case 2: return result + '2';
