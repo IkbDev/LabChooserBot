@@ -4,5 +4,4 @@
 out
 gen
 build.properties
-*.ipr
 *.iws
