@@ -1,4 +1,0 @@
-build:
-  image: frekele/ant
-  commands:
-    - ant all
