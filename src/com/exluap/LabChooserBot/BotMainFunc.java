@@ -50,14 +50,19 @@ public class BotMainFunc extends TelegramLongPollingBot {
             SendMSG(message.getChatId().toString(),LabWork4(Integer.parseInt(message.getText())));
         } else if (message.getText().equalsIgnoreCase("слава Украине!")) {
             UkraineLifeHack(message.getChatId().toString());
-        } else if(!message.getText().matches("[-+]?\\d+")){
+        } else if(!message.getText().matches("[-+]?\\d+") && !message.getText().endsWith("?")){
             SendMSG(message.getChatId().toString(), EmojiParser.parseToUnicode("Прости меня, но я понимаю только цифры. Напиши мне последние 4 цифры студенческого и я скажу тебе твой вариант. Не надо писать студенческий номер полностью" +
                     ", пожалей мою оперативную память, ведь мой хозяин, @exluap, написал меня на Java :sweat:" +
                     ", давай попробуем ввод еще разок?"));
-        }else if (message.getText().length() !=4) {
+        }else if (message.getText().length() !=4 && !message.getText().endsWith("?")) {
             SendMSG(message.getChatId().toString(), EmojiParser.parseToUnicode("Упс :fearful:! Что-то пошло не так, " +
                     "я насчитал больше 4 символов, быть может ты ввел лишний пробел или написал номер студнческого" +
                     " полностью? Давай попробуем снова? :wink:"));
+        } else if (message.getText().endsWith("?")) {
+            String[] result = {"Бесспорно", "Это предрешено заранее", "Никаких сомнений", "Определенно да", "Знаки говорят - да", "Спроси позже",
+            "Знаешь, такое лучше не рассказывать", "Дай мне подумать, спроси позже", "По моим данным - нет"};
+
+            SendMSG(message.getChatId().toString(), result[(int) (Math.random() * result.length)]);
         }
 
         }
