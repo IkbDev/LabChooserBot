@@ -8,5 +8,5 @@ package com.exluap.LabChooserBot;
  */
 public class BotConfig {
     public static final String BOT_NAME = "LabChooserBot";
-    public static String BOT_TOKEN; //Токен получаем при первом запуске программы в фоновом режиме
+    public static String BOT_TOKEN; //Токен получаем при первом запуске программы в фоновом режиме.
 }
