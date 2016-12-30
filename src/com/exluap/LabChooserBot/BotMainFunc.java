@@ -45,9 +45,11 @@ public class BotMainFunc extends TelegramLongPollingBot {
                     "и я верну номера вариантов :memo:" +
                     "Меня разработал :nerd: @exluap"));
         } else if (message.getText().matches("[-+]?\\d+") && message.getText().length() == 4) {
+            SendMSG(message.getChatId().toString(),LabWork1(Integer.parseInt(message.getText())));
             SendMSG(message.getChatId().toString(),"Твой вариант лабораторной №2 : " + LabWork(Integer.parseInt(message.getText()))); //Преобразование строки в число
             SendMSG(message.getChatId().toString(),"Твой вариант лабораторной №3 : " + LabWork2(Integer.parseInt(message.getText())));
             SendMSG(message.getChatId().toString(),LabWork4(Integer.parseInt(message.getText())));
+            SendMSG(message.getChatId().toString(),LabWork5(Integer.parseInt(message.getText())));
         } else if (message.getText().equalsIgnoreCase("слава Украине!")) {
             UkraineLifeHack(message.getChatId().toString());
         } else if(!message.getText().matches("[-+]?\\d+") && !message.getText().endsWith("?")){
@@ -127,6 +129,44 @@ public class BotMainFunc extends TelegramLongPollingBot {
             case 9: return result + (numbers-3);
         }
       return null;
+    }
+
+    //Лабораторная работа №5
+    String LabWork5(int numbers) {
+        numbers = numbers % 10;
+        String result = "Твой варианта лабораторной №5: ";
+        switch(numbers) {
+            case 1: return result + '1';
+            case 2: return result + '2';
+            case 3: return result + '3';
+            case 4: return result + '4';
+            case 5: return result + '5';
+            case 6: return result + '6';
+            case 0: return result + "10";
+            case 7: return result + '7';
+            case 8: return result + '8';
+            case 9: return result + '9';
+        }
+        return null;
+    }
+
+    //Лабораторная работа №1
+    String LabWork1(int numbers) {
+        numbers = numbers % 10;
+        String result = "Твой варианта лабораторной №1: ";
+        switch(numbers) {
+            case 1:
+            case 6: return result + '1';
+            case 2:
+            case 7: return result + '2';
+            case 3:
+            case 8: return result + '3';
+            case 4:
+            case 9: return result + '4';
+            case 5:
+            case 0: return result + '5';
+        }
+        return null;
     }
 
     void UkraineLifeHack(String ChatID) {

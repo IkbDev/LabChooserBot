@@ -11,6 +11,7 @@ import org.telegram.telegrambots.exceptions.TelegramApiRequestException;
  */
 public class Main {
     public static void main(String[] args) throws TelegramApiRequestException {
+        BotConfig.BOT_TOKEN = args[0];
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi();
 
 
