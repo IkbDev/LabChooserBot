@@ -4,7 +4,7 @@
 
 ## Компиляция кода
 
-Если вы собрались тестировать функционал бота на собственной машине, то в файле `BotConfig.java` исправьте строки `BOT_NAME` и `BOT_TOKEN` на свои данные от `@botfather`.
+Скачать последний [release][2] и запустить командой `java -jar LabChooserBot.jar <ваш api бота>`
 
 Все библиотеки находятся в папке `lib`
 
@@ -12,3 +12,4 @@
 Вы можете наблюдать за изменениями и будущими фичами [здесь][1] или в файле [changes'n'todo.md][1]
 
 [1]:https://github.com/IkbDev/LabChooserBot/blob/master/changes'n'todo.md
+[2]:https://github.com/IkbDev/LabChooserBot/releases
